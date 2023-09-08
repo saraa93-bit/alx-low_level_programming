@@ -6,7 +6,7 @@
 *
 * Description : print the value of n,greater than,is zero and is less than 6.
 *
-* Return : zero (success)
+* Return : return zero is (success)
 *
 * betty style doc for function main goes there
 */
