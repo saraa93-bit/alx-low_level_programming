@@ -4,7 +4,7 @@
 *
 * Description: print numbers
 *
-* return: 0 is success
+* Return: Always 0 (success)
 */
 int main(void)
 {
