@@ -8,6 +8,8 @@
 * Description : positive and negative intiger number
 *
 * Return : give 0 value if it success output
+*
+* betty style doc for function main goes there
 */
 
 
