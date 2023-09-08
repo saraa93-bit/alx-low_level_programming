@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
-  *main - Entry point
-  *
-  *Description : positive and negative intiger number
-  *
-  *Return : 0 (success)
+*main - Entry point
+*
+*Description : positive and negative intiger number
+*
+*Return : 0 (success)
 */
 
 int main(void)
