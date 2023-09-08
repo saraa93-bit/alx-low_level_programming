@@ -2,7 +2,7 @@
 /**
 * main - Entry point
 *
-* Description: print numbers by ascending 
+* Description: print numbers by ascending
 *
 * Return: Always 0 (success)
 */
