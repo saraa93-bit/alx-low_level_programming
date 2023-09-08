@@ -1,13 +1,12 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include<stdlib.h>
+#include<time.h>
+#include<stdio.h>
 /**
 * main - Entry point
 *
-* Description : positive and negative intiger number
+* Description: positive and negative intiger number
 *
-* Return : give 0 value if it success output
+* Return: Always 0 (success)
 *
 * betty style doc for function main goes there
 */
