@@ -1,14 +1,11 @@
-#include <stdio.h>
-
-/*
+#include<stdio.h>
+/**
 * main - Entry point
 *
-* Description :print all alphabet letter from a to z
+* Description: print all alphabet letter from a to z
 *
-* Return : zero Always (success)
+* Return: Always 0 (success)
 */
-
-
 int main(void)
 {
 char ch = 'a';
