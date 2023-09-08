@@ -4,7 +4,7 @@
 *
 * Description : print lower case except e and q
 *
-* Return : zero is success
+* Return: zero is success
 */
 int main(void)
 {
