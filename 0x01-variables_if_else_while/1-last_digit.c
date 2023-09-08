@@ -1,19 +1,16 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-/*
+#include<stdlib.h>
+#include<time.h>
+#include<stdio.h>
+/**
 * main - Entry point
 *
-* Description : print the value of n,greater than,is zero and is less than 6.
+* Description: print the value of n,greater than,is zero and is less than 6.
 *
-* Return : return zero is (success)
-*
-* betty style doc for function main goes there
+* Return: Always 0 (success)
 */
-
 int main(void)
 {
-	int n, digit;
+int n, digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
