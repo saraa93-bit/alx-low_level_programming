@@ -1,12 +1,11 @@
-#include <stdio.h>
-/*
+#include<stdio.h>
+/**
 * main - Entry point
 *
-* Description : print alphabet capital and small letter
+* Description: print alphabet capital and small letter
 *
-* Return : give zero is success
+* Return: Always 0 (success)
 */
-
 int main(void)
 {
 char ch = 'a';
