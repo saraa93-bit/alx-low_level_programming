@@ -1,10 +1,10 @@
 #include <stdio.h>
 /*
-*main - Entry point
+* main - Entry point
 *
-*Description : print alphabet capital and small letter
+* Description : print alphabet capital and small letter
 *
-*Return : give zero is success
+* Return : give zero is success
 */
 
 int main(void)
@@ -16,7 +16,7 @@ while (ch <= 'z')
 putchar (ch);
 ch++;
 }
-while (CH <= 'Z' )
+while (CH <= 'Z')
 {
 putchar (CH);
 CH++;
