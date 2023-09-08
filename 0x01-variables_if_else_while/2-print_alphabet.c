@@ -3,9 +3,9 @@
 /*
 * main - Entry point
 *
-* Description :print all alphabet letter
+* Description :print all alphabet letter from a to z
 *
-* Return : 0 Always (success)
+* Return : zero Always (success)
 */
 
 

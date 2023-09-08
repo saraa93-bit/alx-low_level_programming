@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/**
+/*
 * main - Entry point
 *
 * Description : print the value of n,greater than,is zero and is less than 6.
 *
-* Return : 0 (success)
+* Return : zero (success)
 *
 * betty style doc for function main goes there
 */
