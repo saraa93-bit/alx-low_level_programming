@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* main - check the code
+* main -Entry point
 *
-* Description: print_alphabet in lowercase
+* Description: print_alphabet in lowercase from a to z by using _Putchar function
 *
 * Return: Always 0 (success)
 */
