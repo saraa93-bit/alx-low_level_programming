@@ -2,7 +2,7 @@
 /**
 * main - check the code
 *
-* Description: print_alphabet in lower case
+* Description: print_alphabet in lowercase
 *
 * Return: Always 0 (success)
 */
@@ -14,5 +14,4 @@ for (i = 'a'; i <= 'z'; i++)
 _putchar(i);
 }
 _putchar('\n');
-return (0);
 }
