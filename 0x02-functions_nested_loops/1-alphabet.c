@@ -1,10 +1,6 @@
 #include "main.h"
 /**
-* main -Entry point
-*
-* Description: print_alphabet in lowercase from a to z by using _Putchar function
-*
-* Return: Always 0 (success)
+* print_alphabet - utilize on the _Putchar function to print the alphabet a - z
 */
 void print_alphabet(void)
 {
