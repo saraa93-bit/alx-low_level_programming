@@ -1,12 +1,12 @@
 #include "main.h"
+
 /**
-* abs - gives the absolute value
-*
+* _abs - gives the absolute value
 * of an integer.
 *
 * @n: input number as an integer.
 *
-* Return: absolute value
+* Return: absolute value
 */
 
 
