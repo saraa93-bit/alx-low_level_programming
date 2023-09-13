@@ -2,7 +2,7 @@
 
 /**
 * _abs - gives the absolute value
-* of an integer.
+*of an integer.
 *
 * @n: input number as an integer.
 *
