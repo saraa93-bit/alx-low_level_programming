@@ -13,7 +13,7 @@ int lastDigit;
 lastDigit = n % 10;
 if (n < 0)
 {
-putchar(lastDigit + '0')
+putchar(lastDigit + '0');
 }
 else
 {
