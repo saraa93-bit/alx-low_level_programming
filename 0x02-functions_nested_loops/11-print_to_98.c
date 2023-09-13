@@ -1,25 +1,20 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-* main - Prints the sum of all multiples of 3 or 5 up to 1024
+* print_to_98 - Print n to 98 counts sebarated by comma followed by space and number.
 *
-* Return: Always (Success)
+* @n: input
 */
-int main(void)
+void print_to_98(int n)
 {
-int i, z = 0;
-
-while (i < 1024)
-{
-if ((i % 3 == 0) || (i % 5 == 0))
-{
-z += i;
+int count;
+if (n > 98)
+for ( count = n; count > 98; count--)
+	printf("%d, ", count);
+else
+for ( count = n; count < 98; count++)
+	printf("%d, ", count);
+printf("98\n");
 }
 
-i++;
-}
 
-printf("%d\n", z);
-return (0);
-}
