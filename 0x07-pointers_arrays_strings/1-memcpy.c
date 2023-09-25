@@ -19,7 +19,7 @@ while (n > 0)
 i++;
 j++;
 n--;
-src[i] = dest[j];
+dest[i] = src[j];
 }
 
 return (dest);
