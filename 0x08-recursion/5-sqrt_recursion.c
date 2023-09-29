@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include <math.h>
 
-int _squrt_check(int y, int x)
 /**
 * _sqrt_recursion - returns the natural square root of a number
 *
@@ -13,35 +13,30 @@ int _squrt_check(int y, int x)
 
 int _sqrt_recursion(int n)
 {
-	if (n == 0)
+	if (n < 0)
 	{
-		return (0);
+		return (-1);
 	}
-
-	return (_squrt_check(n, 1));
+	return (_squrt_check(n, 0));
 }
 
 /**
-* _squrt_check - calculates natural square root
-* @x: number to calculate natural square root
-* @y: interate number
+* _squrt_check - to find natural square root
+* @n: number to calculate natural square root
+* @y: iterator
 *
 * Return: the natural square root of a number
 */
 
-int _squrt_check(int y, int x)
+int _squrt_check(int n, int y)
 {
-	if (y * y == x)
+	if (y * y == n)
 	{
 		return (y);
 	}
-	else if (y * y < x)
-	{
-		return (_squrt_check(x, y + 1));
-	}
-
-	else
+	else if (y * y > n)
 	{
 		return (-1);
 	}
+	return (_squrt_check(n, y + 1));
 }
