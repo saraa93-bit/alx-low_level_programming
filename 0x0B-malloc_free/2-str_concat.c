@@ -28,6 +28,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	i = 0;
 	while (i < len1)
 	{
 		ptr[i] = s1[i];
@@ -41,5 +42,5 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	ptr[len1] = '\0';
-	return (*ptr);
+	return (ptr);
 }
