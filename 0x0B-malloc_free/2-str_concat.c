@@ -41,5 +41,5 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	ptr[len1] = '\0';
-	return (ptr);
+	return (*ptr);
 }
