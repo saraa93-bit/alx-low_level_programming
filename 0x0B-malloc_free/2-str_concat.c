@@ -3,23 +3,6 @@
 #include <stdlib.h>
 
 /**
-* _strlen - find length of a string
-* @s: string
-*
-* Return: int
-*/
-
-int _strlen(char *s)
-{
-	int size = 0;
-
-	for (; s[size] != '\0'; size++)
-	{
-		return (size);
-	}
-}
-
-/**
 * *str_concat - concatenates two strings
 * @s1: string 1
 * @s2: string 2
@@ -28,32 +11,34 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int size1, size2, i;
-	char *m;
+	int len1 = 0, len2 = 0, i = 0;
+	char *ptr;
 
 	if (s1 == NULL)
-		s1 = "\0";
+		len1 = 0;
 	if (s2 == NULL)
-		s2 = "\0";
-	size1 = _strlen(s1);
-	size2 = _strlen(s2);
-	m = malloc((size1 + size2) * sizeof(char) + 1);
-	if (m == 0)
-	{
-		return (0);
-	}
-	for (i = 0; i <= size1 + size2; i++)
-	{
-		if (i < size1)
-		{
-			m[i] = s1[i];
-		}
-		else
-		{
-			m[i] = s2[i - size1];
-		}
+		len2 = 0;
+	while (s1[len1])
+		len1++;
+	while (s2[len2])
+		len2++;
 
+	ptr = malloc(sizeof(*s1) * (len1 + len2 + 1));
+	if (ptr == NULL)
+	{
+		return (NULL);
 	}
-	m[i] = '\0';
-	return (m);
+	while (i < len1)
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	while (i < len2)
+	{
+		ptr[len1] = s2[i];
+		len1++;
+		i++;
+	}
+	ptr[len1] = '\0';
+	return (ptr);
 }
