@@ -37,34 +37,25 @@ int check_num(char *str)
 */
 
 int main(int argc, char *argv[])
-
 {
-	/*Declaring variables*/
-	int count;
-	int str_to_int;
-	int sum = 0;
+	int i = 0, sum = 0, x = 0;
 
-	count = 1;
-	while (count < argc) /*Goes through the whole array*/
+	while (i < argc)
 	{
-		if (check_num(argv[count]))
+		x = atoi(argv[i]);
 
+		if (x >= 0 && x <= 9)
 		{
-			str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
-			sum += str_to_int;
+			sum += x;
+			i++;
 		}
-
-		/*Condition if one of the number contains symbols that are not digits*/
 		else
 		{
 			printf("Error\n");
 			return (1);
 		}
-
-		count++;
 	}
-
-	printf("%d\n", sum); /*print sum*/
-
+	printf("%d\n", sum);
 	return (0);
+
 }
