@@ -25,7 +25,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	va_start(pt, n);
 	while (x--)
-		printf("%s%s", (ap = va_arg(pt, char *)), ? (ap : "(nil)",
+		printf("%s%s", (ap = va_arg(pt, char *)) ? ap : "(nil)",
 					x ? (separator ? separator : "") : "\n");
-	va_end(ap);
+	va_end(pt);
 }
+
