@@ -1,33 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
-* main - Entry point
-*
-* Description: print compination of numbers
-*
-* Return: Always 0 (success)
-*/
+ * main - Print all possible different combinations of two digits
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int digit1 = 0, digit2;
-while (digit1 <= 9)
-{
-digit2 = 0;
-}
-while (digit2 <= 9)
-{
-if (digit1 != digit2 && digit1 < digit2)
-{
-putchar(digit1 + 48);
-putchar(digit2 + 48);
-}
-if (digit1 + digit2 != 17)
-{
-putchar(',');
-putchar(' ');
-}
-digit2++;
-}
-digit1++;
-putchar('\n');
-return (0);
+	int tens;
+	int ones;
+
+	for (tens = 0; tens <= 9; tens++)
+	{
+		for (ones = tens + 1; ones <= 9; ones++)
+		{
+			putchar(tens + '0');
+			putchar(ones + '0');
+
+			if (tens < 8 || ones < 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+
+	return (0);
 }
