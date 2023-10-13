@@ -3,25 +3,42 @@
 #include "function_pointers.h"
 
 /**
-* main - check the code for the school students
-* @argc: the number of args
-* @argv: argument victor
+* main - prints the opcodes of its own main function
+* @argc: the number of arguments
+* @argv: an array of arguments
 *
-* Return: Always 0
+* Return: 0
 */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	char *p = (char *)main;
-	int i;
+	int x, y;
+	char *pt;
 
 	if (argc != 2)
-		printf("Error\n"), exit(1);
-	i = atoi(argv[1]);
-	if (i < 0)
-		printf("Error\n"), exit(2);
-	while (i--)
-		 printf("%02hhx%s", *p++, i ? " " : "\n");
-	return (0);
+	{
+		printf("Error\n");
+		exit(1);
+	}
 
+	x = atoi(argv[1]);
+
+	if (x < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	pt = (char *)main;
+
+	for (y = 0; y < x; y++)
+	{
+		if (y == x - 1)
+		{
+			printf("%02hhx\n", pt[y]);
+			break;
+		}
+		printf("%02hhx ", pt[y]);
+	}
+	return (0);
 }
