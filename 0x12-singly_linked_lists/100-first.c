@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <lists.h>
 
-void __attribute__((constructor)) hare(void);
-
 /**
-* hare - Prints a string before the
-* main function is executed.
+* b - prints from init by the loader before main
 */
 
-void hare(void)
+void b(void) __attribute__ ((constructor));
+void b(void)
 {
-printf("You're beat! and yet, you must allow,\n"
-"I bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
