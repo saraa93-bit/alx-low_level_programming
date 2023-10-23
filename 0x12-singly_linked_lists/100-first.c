@@ -1,10 +1,7 @@
 #include <stdio.h>
-#include <lists.h>
-
 /**
-* b - prints from init by the loader before main
-*/
-
+ * b - prints from init by the loader before main
+ */
 void b(void) __attribute__ ((constructor));
 void b(void)
 {
