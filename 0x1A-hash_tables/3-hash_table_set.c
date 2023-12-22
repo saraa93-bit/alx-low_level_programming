@@ -15,46 +15,41 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     hash_node_t *new_node, *temp;
 
     if (ht == NULL || key == NULL || *key == '\0')
-        return (0);
-
-    // Calculate the index using the provided hash function
+    return (0);
+    
     index = hash_djb2((unsigned char *)key) % ht->size;
 
-    // Check if the key already exists, update its value
     temp = ht->array[index];
     while (temp != NULL)
     {
         if (strcmp(temp->key, key) == 0)
         {
-            free(temp->value);  // Free the previous value
+            free(temp->value);
             temp->value = strdup(value);
             if (temp->value == NULL)
-                return (0);  // Memory allocation failure
-            return (1);  // Success
+                return (0);
+            return (1);
         }
         temp = temp->next;
     }
 
-    // Allocate memory for the new node
     new_node = malloc(sizeof(hash_node_t));
     if (new_node == NULL)
-        return (0);  // Memory allocation failure
-
-    // Duplicate the key and value
-    new_node->key = strdup(key);
-    new_node->value = strdup(value);
+        return (0);
+        
+        new_node->key = strdup(key);
+        new_node->value = strdup(value);
 
     if (new_node->key == NULL || new_node->value == NULL)
     {
         free(new_node->key);
         free(new_node->value);
         free(new_node);
-        return (0);  // Memory allocation failure
+        return (0);
     }
 
-    // Add the new node at the beginning of the list
     new_node->next = ht->array[index];
     ht->array[index] = new_node;
 
-    return (1);  // Success
+    return (1);
 }
