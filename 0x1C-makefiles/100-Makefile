@@ -4,7 +4,7 @@
 CC = gcc
 
 # Source files
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
@@ -13,30 +13,28 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 
 # Program to delete files
-RM = /bin/rm -f
+RM = /bin/rm
 
 # Compiler flags
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-.PHONY: all clean oclean fclean re
-
-# Default target
+# Main rule
 all: $(NAME)
 
-# Rule to build the executable
+# Compile the executable
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $@
+    $(CC) $(OBJ) -o $(NAME)
 
-# Rule to compile source files
-%.o: %.c m.h
-	$(CC) $(CFLAGS) -c $< -o $@
+# Compile the source files
+%.o: %.c
+    $(CC) $(CFLAGS) -c $< -o $@
 
-# Cleaning rules
+# Clean temporary and executable files
 clean:
-	$(RM) $(NAME) *~ $(OBJ)
+    $(RM) -f *~ $(NAME)
 
+# Delete object files
 oclean:
-	$(RM) $(OBJ)
+    $(RM) -f $(OBJ)
 
-fclean: clean oclea
-
+# Delete all temporary and executable files
